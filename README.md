@@ -3,7 +3,7 @@ Create your own IRC server in C++, fully compatible with an official client.
 ---------------------------------------------------------
 This project aims to provide a fully compatible IRC (Internet Relay Chat) server implemented in C++. It allows you to create your own IRC server that can communicate with official IRC clients.
 
-Features
+#Features
 Compatibility: The server is designed to be fully compatible with the IRC protocol as specified in RFC 1459 (or later versions).
 Client Communication: Supports bidirectional communication between the server and IRC clients using TCP/IP sockets.
 User Management: Allows clients to register, log in, and manage user information.
