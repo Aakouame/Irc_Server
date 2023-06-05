@@ -23,27 +23,16 @@ This project aims to provide a fully compatible IRC (Internet Relay Chat) server
 1. Clone the project repository:
 
    ```bash
-   git clone https://github.com/your-username/irc-server.git
-   cd irc-server
+   git clone https://github.com/Aakouame/ft_irc.git
+   cd ft_irc
+   make
+
    ```
-
-2. Compile the server:
-
-   ```bash
-   g++ -std=c++98 -o irc_server main.cpp socket.cpp irc_server.cpp user.cpp channel.cpp
-   ```
-
-3. Run the server:
-
-   ```bash
-   ./irc_server
-   ```
-
-4. Connect your IRC client to the server:
+3. Connect your IRC client to the server:
 
    Use your preferred IRC client software and connect to the IP address and port on which the server is running (default is `localhost:6667`).
 
-5. Enjoy using your custom IRC server!
+4. Enjoy using your custom IRC server!
 
 ## Configuration
 
