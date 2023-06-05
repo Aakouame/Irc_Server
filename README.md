@@ -34,17 +34,6 @@ This project aims to provide a fully compatible IRC (Internet Relay Chat) server
 
 4. Enjoy using your custom IRC server!
 
-## Configuration
-
-The server configuration can be modified in the `config.txt` file. The following parameters can be adjusted:
-
-- `PORT`: The port number on which the server listens for incoming connections.
-- `MAX_CLIENTS`: The maximum number of simultaneous client connections the server can handle.
-- `MAX_CHANNELS`: The maximum number of channels the server can manage.
-- `MAX_USERS`: The maximum number of registered users the server can handle.
-
-Feel free to modify these parameters to suit your needs.
-
 ## Contributing
 
 Contributions are welcome! If you find any issues or have suggestions for improvement, please open an issue or submit a pull request. Make sure to follow the existing code style and guidelines.
