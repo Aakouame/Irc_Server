@@ -38,10 +38,6 @@ This project aims to provide a fully compatible IRC (Internet Relay Chat) server
 
 Contributions are welcome! If you find any issues or have suggestions for improvement, please open an issue or submit a pull request. Make sure to follow the existing code style and guidelines.
 
-## License
-
-This project is licensed under the [MIT License](https://opensource.org/licenses/MIT). You are free to modify, distribute, and use the code for personal or commercial purposes.
-
 ## Acknowledgments
 
 This project was inspired by the IRC protocol specifications and aims to provide a basic IRC server implementation for educational purposes.
