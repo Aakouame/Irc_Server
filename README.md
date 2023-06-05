@@ -1,7 +1,6 @@
 # ft_irc
 Create your own IRC server in C++, fully compatible with an official client.
 ---------------------------------------------------------
-IRC Server in C++ - Readme
 This project aims to provide a fully compatible IRC (Internet Relay Chat) server implemented in C++. It allows you to create your own IRC server that can communicate with official IRC clients.
 
 Features
