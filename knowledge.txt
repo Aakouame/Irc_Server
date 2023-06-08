@@ -1,0 +1,18 @@
+1- int sockfd = socket(domain, type, protocol)
+
+2- For communicating between processes on different hosts
+     connected by IPV4, we use AF_INET and AF_I NET 6 for processes
+      connected by IPV6.
+
+3-	SOCK_STREAM: TCP(reliable, connection oriented)
+	SOCK_DGRAM: UDP(unreliable, connectionless)
+
+4-	sockaddr_in is a structure used in C and C++ programming 
+	languages to represent an IPv4 socket address.
+
+5-	sockaddr_in is a structure used in C and C++ programming languages to 
+      represent an IPv4 socket address.
+
+6-    you can check if a client is disconnected from your server by using the select().
+
+7-    
