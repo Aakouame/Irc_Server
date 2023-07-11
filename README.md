@@ -45,3 +45,8 @@ This project was inspired by the IRC protocol specifications and aims to provide
 ## References
 
 - IRC Protocol Specifications: [RFC 1459](https://tools.ietf.org/html/rfc1459)
+- punch.wa.us.dal.net
+- https://irc.dalexhd.dev/
+- ...
+
+## collaboration with KD-ayoub and youssefqabli
