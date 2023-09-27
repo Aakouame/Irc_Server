@@ -3,34 +3,38 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: akouame <akouame@student.42.fr>            +#+  +:+       +#+         #
+#    By: akadi <akadi@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/06/08 14:42:02 by akouame           #+#    #+#              #
-#    Updated: 2023/06/08 14:43:48 by akouame          ###   ########.fr        #
+#    Created: 2023/06/13 16:11:29 by akouame           #+#    #+#              #
+#    Updated: 2023/06/24 12:11:58 by akadi            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = ircserv
-SRCS =  main.cpp server.cpp
-OBJS = $(SRCS:.cpp=.o)
-FLAGS = -Wall -Werror -Wextra -std=c++98
+
 CC = c++
-HEADER = server.hpp 
 
-all: $(NAME)
+FLAGS = -Wall -Wextra -Werror -std=c++98 -g
 
-$(NAME): $(OBJS)
-	$(CC) $(FLAGS) $(OBJS) -o $(NAME)
+RM = rm -rf
 
-%.o: %.cpp $(HEADER)
-	$(CC) $(FLAGS) -c $< -o $@
+src = main.cpp ft_irc.cpp checkArguments.cpp outils.cpp client_irc.cpp ParsingUtils.cpp Channel.cpp
 
-clean:
-	rm -rf $(OBJS)
+obj = $(src:.cpp=.o)
 
-fclean: clean
-	rm -rf $(NAME)
+hdr = ft_irc.hpp client_irc.hpp Channel.hpp
 
-re: fclean all
+all : $(NAME)
 
-.PHONY	:	all clean fclean re
+$(NAME) : $(obj)
+	$(CC) -lcurl $(FLAGS) $(obj) -o $(NAME)
+
+%.o : %.cpp  $(hdr)
+	$(CC) $(FLAGS) $< -c
+clean :
+	$(RM) $(obj)
+
+fclean : clean
+	$(RM) $(NAME)
+
+re : fclean all

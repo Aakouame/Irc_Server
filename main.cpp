@@ -3,41 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akouame <akouame@student.42.fr>            +#+  +:+       +#+        */
+/*   By: akadi <akadi@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/08 14:18:31 by akouame           #+#    #+#             */
-/*   Updated: 2023/06/08 16:48:25 by akouame          ###   ########.fr       */
+/*   Created: 2023/06/03 17:53:34 by akadi             #+#    #+#             */
+/*   Updated: 2023/06/24 12:10:51 by akadi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "server.hpp"
+
+#include "ft_irc.hpp"
 
 int main(int ac, char **av)
 {
-    if (ac != 3)
-    {
-        std::cerr << "You must have 2 arguments {port, password} !" << std::endl;
-        return (1);
-    }
-    else
-    {
-        int i = -1;
-        while (av[1][++i])
-        {
-            if (!isdigit(av[1][i]))
-            {
-                std::cerr << "Error: Bad input !" << std ::endl;
-                return (1);
-            }
-        }
-        long port = atoi(av[1]);
-        if (port < 0 || port > 65535)
-        {
-            std::cerr << "Error: Bad port !" << std::endl;
-            return (1);
-        }
-        Server  srv(port);
-        
-        srv.run_server();
-    }
+    checkArguments(ac, av);
+    IrcServer irc(av[1], av[2]);
+    int sockFd = irc.SetupServer();
+    irc.RunServer(sockFd);
 }
