@@ -15,7 +15,7 @@ This project aims to provide a fully compatible IRC (Internet Relay Chat) server
 
 ## Requirements
 
-- C++98 compatible compiler (e.g., GCC or Clang)
+- C++98 compatible compiler
 - Standard C++98 libraries
 
 ## Getting Started
